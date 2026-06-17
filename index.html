@@ -1,1 +1,27 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Script Hub</title>
+</head>
+<body>
+    <h2>Script Roblox</h2>
+
+    <textarea id="script" rows="10" cols="60">
+loadstring(game:HttpGet("https://example.com/script.lua"))()
+    </textarea>
+
+    <br><br>
+
+    <button onclick="copyScript()">Copy Script</button>
+
+    <script>
+        function copyScript() {
+            let text = document.getElementById("script");
+            text.select();
+            navigator.clipboard.writeText(text.value);
+            alert("Đã copy!");
+        }
+    </script>
+</body>
+</html>
